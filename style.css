@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: customFonts;
+    src: url(/Maloney.ttf);
+}
+
+body{
+    
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.container{
+    height: 100%;
+    width:100%;
+    position: absolute;
+    
+}
+.buttons{
+    position: absolute;
+    top: 80%;
+    left: 35%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap:50px;
+}
+button{
+    padding: 10px;
+    font-size: 1rem;
+    border:1px solid transparent;
+    z-index: 99;
+    font-weight: 700;
+    
+    font-size: 1.5rem;
+    border-radius: 20px;
+    letter-spacing: 5px;
+}
+
+button:hover{
+    box-shadow: 5px 5px rgb(241, 236, 236);
+    color:#c3fff9;
+    background-color: hsla(0, 2%, 12%, 0.938);
+    
+    transition: .2s;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+.animation{
+    animation:  .5s ease-out  1 forwards SlideNext;
+}
+.animation2{
+    animation:  .5s ease-out  1 forwards SlidePrev;
+}
+@keyframes SlideNext{
+    0%{
+        left: 0;
+    }
+    50%{
+        left:-10%;
+    }
+    100%{
+        left: 0;
+    }
+}
+@keyframes SlidePrev{
+    0%{
+        right: 0;
+    }
+    50%{
+        right:-10%;
+    }
+    100%{
+        right: 0;
+    }
+}
